@@ -82,15 +82,15 @@ int main(int argc, char *argv[])
 		   	{
 				printf("\nClient has requested for the webpage %s\n", url);
 				
-				/* Searching the webpage and updating "list.txt" file */
+				// Searching the webpage and updating "list.txt" file
 				search_webpage();
 
-				if(strcmp(status, "ERR") == 0) /* Wrong URL is given by client */
+				if(strcmp(status, "ERR") == 0) // Wrong URL is given by client
 				{
 					printf("\nClient has requested a wrong URL...\n\n");
 					strcpy(buffer, "ERR");
 				}
-				else if(strcmp(status, "AVL") == 0) /* Web page is available in cache */
+				else if(strcmp(status, "AVL") == 0) // Web page is available in cache
 				{
 					printf("\nThe web page is already stored in cache...\n"); 
 					goto use_cache;
